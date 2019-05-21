@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="bmi calculator"
+        android:layout_marginBottom="32dp"
+        android:textSize="24sp"
+        android:textAllCaps="true"
+        android:layout_gravity="center"
+        android:textColor="#000000"
+        android:textStyle="bold"/>
+
+
+    <EditText
+        android:id="@+id/weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:inputType="numberDecimal"
+        android:hint="Weight (kg)"
+        android:layout_gravity="center"
+        android:textColor="#000000"
+        android:textAlignment="center"/>
+
+
+
+    <EditText
+        android:id="@+id/height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:inputType="numberDecimal"
+        android:hint="Height (m)"
+        android:layout_marginTop="32dp"
+        android:layout_gravity="center"
+        android:textColor="#000000"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/calculateBmi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="   calculate   "
+        android:layout_marginTop="32dp"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_button"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="24sp"
+        android:textColor="#000000"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/quoteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="   generate quote   "
+        android:layout_marginTop="32dp"
+        android:onClick="generateQuote"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_button"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/quote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:layout_gravity="center"
+        android:textAlignment="center"/>
+
+
+
+</LinearLayout>
