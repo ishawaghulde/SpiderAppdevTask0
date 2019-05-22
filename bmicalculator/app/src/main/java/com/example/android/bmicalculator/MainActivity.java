@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     Button calculate;
     Typeface myFont;
     TextView quote;
+    String comment="";
     Button generateQuote;
 
     ArrayList<String> list =new ArrayList();
@@ -70,11 +71,28 @@ public class MainActivity extends AppCompatActivity {
         String strHeight = height.getText().toString();
         String strWeight = weight.getText().toString();
 
-        if(strHeight != null && !"".equals(strHeight) && strWeight != null && !"".equals(strWeight)){
+        if(strHeight != null && !"".equals(strHeight) && !"0".equals(strHeight) && strWeight != null && !"".equals(strWeight)&& !"0".equals(strWeight)){
             float fWeight = Float.parseFloat(strWeight);
             float fHeight = Float.parseFloat(strHeight);
-            float bmi = fWeight/(fHeight*fHeight);
+            float bmi = (fWeight/(fHeight*fHeight))*10000;
             displayBMI(bmi);
+        }
+
+        else if("0".equals(strHeight) && !"0".equals(strWeight)) {
+            comment = "C'mon! I'm sure you are taller than that!";
+            result.setText(comment);
+        }
+        else if( "0".equals(strWeight)&& !"0".equals(strHeight)){
+            comment = "Damn! And to think even vacuum has mass.";
+            result.setText(comment);
+        }
+        else if("0".equals(strHeight)&& "0".equals(strWeight) ){
+            comment ="Haha sure...Try again!";
+            result.setText(comment);
+        }
+        else if("".equals(strWeight)|| "".equals(strHeight)){
+            String comment ="Invalid details, try again";
+            result.setText(comment);
         }
     }
 
